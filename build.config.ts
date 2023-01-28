@@ -6,9 +6,6 @@ export default defineBuildConfig({
     clean: true,
     rollup: {
         emitCJS: true,
-        commonjs: {
-            transformMixedEsModules: true,
-        },
     },
     failOnWarn: false,
 });
