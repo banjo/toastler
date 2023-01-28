@@ -1,5 +1,5 @@
 import { Options } from "./types";
-import { isBrowser } from "@banjoanton/utils";
+import { isBrowser, select } from "@banjoanton/utils";
 import { backgroundColor, color, defaultOptions, icons } from "./defaults";
 
 /**
@@ -24,6 +24,8 @@ export const toast = (message: string, options?: Options) => {
 
     const toast = document.createElement("div");
     toast.classList.add("banjo-toast");
+    toast.dataset.type = type!;
+    toast.dataset.duration = duration!.toString();
     toast.style.cssText = `
         transition: all ${animationTiming}ms ease;
         font-size: ${fontSize};
@@ -59,26 +61,27 @@ export const toast = (message: string, options?: Options) => {
         toast.style.transform = "translateX(0%)";
     };
 
-    const hide = () => {
-        toast.style.transform = "translateX(200%)";
+    const hide = (element = toast, beforeRemove = 5000) => {
+        element.style.transform = "translateX(200%)";
         setTimeout(() => {
-            toast.remove();
-            // @ts-ignore
-            window.banjoToast = null;
-        }, animationTiming);
+            element.parentNode?.removeChild(element);
+        }, beforeRemove);
     };
 
     toast.addEventListener("click", () => {
         hide();
     });
 
-    // @ts-ignore
-    if (window.banjoToast) window.banjoToast.hide();
+    if (select.exists(".banjo-toast")) {
+        const oldToasts = select.all<HTMLDivElement>(".banjo-toast");
+        oldToasts.forEach((oldToast) => {
+            const dur = oldToast.dataset.duration;
+            hide(oldToast, Number(dur) + animationTiming! ?? 5000);
+        });
+    }
 
-    // @ts-ignore
-    window.banjoToast = { hide };
     setTimeout(show, animationTiming);
     setTimeout(hide, duration);
 
-    return { hide };
+    return { hide: () => hide() };
 };
