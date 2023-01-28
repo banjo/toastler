@@ -9,7 +9,7 @@ A lightweight and simple toast notification library for the browser.
 -   :palm_tree: - Three-shakable ESM modules.
 -   :speech_balloon: - Fully typed TSDocs with examples
 -   :star: - No dependencies
--   :file_folder: - Super lightweight (<10kb)
+-   :file_folder: - Super lightweight (<15kb)
 -   :movie_camera: - Simple animations
 -   :white_check_mark: - Simple API and usage
 -   :gear: - Customizable with nice defaults
