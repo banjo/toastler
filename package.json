@@ -1,7 +1,7 @@
 {
     "name": "toastler",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "packageManager": "pnpm@7.26.1",
     "description": "",
     "author": "Anton Ödman <anton.odman@gmail.com>",
