@@ -37,8 +37,8 @@ toast("Hello world", {
     });
 
 // Simple to remove
-const { remove } = toast("Hello world");
-remove();
+const { hide } = toast("Hello world");
+hide();
 
 // New toasts will remove old ones
 toast("First toast");
