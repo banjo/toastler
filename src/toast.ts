@@ -73,7 +73,7 @@ export const toast = (message: string, options?: Options) => {
     });
 
     // @ts-ignore
-    if (window.banjoToast) window.banjoToast.remove();
+    if (window.banjoToast) window.banjoToast.hide();
 
     // @ts-ignore
     window.banjoToast = { hide };
