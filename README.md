@@ -8,9 +8,12 @@ A lightweight and simple toast notification library for the browser.
 -   :speech_balloon: - Fully typed TSDocs with examples
 -   :star: - No dependencies
 -   :file_folder: - Super lightweight (<10kb)
+-   :movie_camera: - Simple animations
 -   :white_check_mark: - Simple API and usage
 -   :gear: - Customizable with nice defaults
 -   :large_blue_circle: - Written in TypeScript
+
+Mostly used in basic JavaScript/TypeScript projects where you want a simple toast/snackbar without having external dependencies or a large third-party library.
 
 ## Usage
 
@@ -23,7 +26,13 @@ const { toast } = require("toastler");
 toast("Hello world");
 
 // Highly customizable
-toast("Hello world", { duration: 10000, type: "error", animationTiming: 500, fontSize: "1.5rem" });
+toast("Hello world", { 
+    duration: 10000, 
+    type: "error", 
+    animationTiming: 500, 
+    fontSize: "1.5rem"
+    //... 
+    });
 
 // Simple to remove
 const { remove } = toast("Hello world");
