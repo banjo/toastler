@@ -1,17 +1,17 @@
 {
-    "name": "pkg-name",
+    "name": "toastler",
     "type": "module",
     "version": "0.0.0",
     "packageManager": "pnpm@7.26.1",
     "description": "",
     "author": "Anton Ödman <anton.odman@gmail.com>",
     "license": "MIT",
-    "homepage": "https://github.com/banjo/pkg-name#readme",
+    "homepage": "https://github.com/banjo/toastler#readme",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/banjo/pkg-name.git"
+        "url": "git+https://github.com/banjo/toastler.git"
     },
-    "bugs": "https://github.com/banjo/pkg-name/issues",
+    "bugs": "https://github.com/banjo/toastler/issues",
     "keywords": [],
     "sideEffects": false,
     "exports": {
@@ -58,7 +58,6 @@
         "husky": "^8.0.3",
         "pnpm": "^7.26.1",
         "prettier": "^2.8.3",
-        "pretty-quick": "^3.1.3",
         "typescript": "^4.9.4",
         "unbuild": "^1.1.1",
         "vite": "^4.0.4",
