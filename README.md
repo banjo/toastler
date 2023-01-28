@@ -1,6 +1,6 @@
 # :bread: toastler
 
-[![NPM version](https://img.shields.io/npm/v/@banjoanton/toastler?color=%23c53635&label=%20)](https://www.npmjs.com/package/@banjoanton/toastler)
+[![NPM version](https://img.shields.io/npm/v/toastler?color=%23c53635&label=%20)](https://www.npmjs.com/package/toastler)
 
 A lightweight and simple toast notification library for the browser. 
 
