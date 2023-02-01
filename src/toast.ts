@@ -1,6 +1,6 @@
-import { Options } from "./types";
 import { isBrowser, select } from "@banjoanton/utils";
 import { backgroundColor, color, defaultOptions, icons } from "./defaults";
+import { Options } from "./types";
 
 /**
  * Show a toast message. If a toast is already showing, it will be removed and replaced with the new one.
@@ -42,6 +42,7 @@ export const toast = (message: string, options?: Options) => {
         align-items: center;
         gap: 1rem;
         cursor: pointer;
+        z-index: 9999;
         `;
 
     toast.style.backgroundColor = backgroundColor[type!];
